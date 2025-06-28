@@ -284,7 +284,7 @@ class BaseImageTransformPipeline(BaseDataTransformPipeline, ABC):
             entry = {
                 'filename': filename,
                 'og_index': i,
-                'label': y[i] if y is not None else None
+                'label': y.iloc[i] if y is not None else None
             }
             if metadata:
                 entry.update(metadata)
